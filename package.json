@@ -2,14 +2,27 @@
   "name": "lifecycle",
   "version": "0.1.0",
   "private": true,
+    "husky": {
+      "hooks": {
+        "pre-commit": "lint-staged"
+      }
+    },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.1.1",
+    "prettier": "^2.0.2",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-scripts": "3.4.0"
   },
+   "lint-staged": {
+     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+       "prettier --write"
+     ]
+   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -30,5 +43,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "prettier-stylelint": "^0.4.2",
+    "stylelint": "^13.2.1",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^20.0.0"
   }
 }
